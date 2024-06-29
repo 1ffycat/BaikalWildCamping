@@ -83,18 +83,30 @@ export default function AddPlacePage() {
             latitude: latitude
         });
 
-        var uri = '/places/add?' + params;
+        var uri = 'https://zhbr.1ffy.ru/places/add?' + params;
 
         for (var i = 0; i < enabledTags.length; i++) {
             uri += `&tags=${enabledTags[i]}`;
         }
 
-        axios.post(uri);
-
         let photo = document.getElementById("photos").files[0];
         let photoFormData = new FormData();
 
-        photoFormData.append("photo", photo);
+        photoFormData.append("file", photo);
+
+        axios.post(uri).then(res => {
+            console.log(res.data.object.id);
+
+            var id = res.data.object.id;
+
+            if (photo)
+                axios.post(`https://zhbr.1ffy.ru/photos/add?placeId=${id}`, photoFormData, {
+                    headers: { "Content-Type": "multipart/form-data" }
+                });
+        }
+        ).catch(error => console.error(error));
+
+
 
         navigate('/');
     }

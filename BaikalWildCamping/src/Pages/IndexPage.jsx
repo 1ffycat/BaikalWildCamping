@@ -128,10 +128,10 @@ export default function IndexPage() {
             longitude: 104.86,
             latitude: 51.72,
             radius: 1000,
-            count: 10,
+            count: 1000,
         });
 
-        var uri = '/places/get?' + params;
+        var uri = 'https://zhbr.1ffy.ru/places/get?' + params;
 
         for (var i = 0; i < enabledTags.length; i++) {
             uri += `&tags=${enabledTags[i]}`;
