@@ -1,5 +1,12 @@
-- Фронтенд: этот репозиторий (Всеволод)
+## Всеволод
+- Инфраструктура, code review других репозиториев
+- Фронтенд (этот репозиторий)
 
-- UserAPI, PhotosAPI: [CartographyPlaces (Ярослав)](https://github.com/zhbr112/CartographyPlaces)
+## Ярослав:
+- Репозиторий [CartographyPlaces](https://github.com/zhbr112/CartographyPlaces)
+- UserAPI
+- PhotosAPI
 
-- PlacesAPI: [practicC- (Максим)](https://github.com/maximgf/practicC-)
+## Максим:
+- Репозиторий [practicC-](https://github.com/maximgf/practicC-)
+- PlacesAPI: 
